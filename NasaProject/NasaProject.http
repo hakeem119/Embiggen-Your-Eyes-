@@ -1,0 +1,6 @@
+@NasaProject_HostAddress = http://localhost:5244
+
+GET {{NasaProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
