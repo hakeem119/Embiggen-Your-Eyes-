@@ -1,4 +1,8 @@
 
+using Microsoft.EntityFrameworkCore;
+using NasaProject.Data;
+using NasaProject.Services;
+
 namespace NasaProject
 {
     public class Program
@@ -6,9 +10,12 @@ namespace NasaProject
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // Add services to the container.
-            //Data Source=db18802.public.databaseasp.net;User ID=db18802;Password=********;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False
+            var tilesPath = builder.Configuration["MapSettings:TilesOutputPath"];
+           
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
