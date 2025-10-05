@@ -1,0 +1,49 @@
+.home {
+  width: 100%;
+  height: 700px;
+  background-image: url('../../../../public/pia04304-mars.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.home .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.home h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #e4f1fb;
+}
+.home p {
+  font-size: 30px;
+  text-align: center;
+  color: #eaab90;
+}
+.home button {
+  height: 50px;
+  width: 25%;
+  background: linear-gradient(90deg, #a33606, #fd3218);
+  margin: auto;
+  position: absolute;
+  bottom: 200px;
+  border-radius:50px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
